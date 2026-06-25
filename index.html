@@ -29,7 +29,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;display:flex;ali
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;padding:80px 48px 60px;max-width:1100px;margin:0 auto;gap:60px}
+.hero{min-height:100vh;display:flex;align-items:center;padding:80px 48px 60px;max-width:min(1400px,92vw);margin:0 auto;gap:60px}
 .hero-left{flex:1}
 .hero-tag{font-family:var(--mono);font-size:11px;color:var(--green);letter-spacing:.12em;text-transform:uppercase;margin-bottom:28px;display:flex;align-items:center;gap:10px}
 .hero-tag::before{content:"";width:28px;height:1px;background:var(--green)}
@@ -53,7 +53,7 @@ h1{font-family:var(--mono);font-size:clamp(38px,5vw,62px);font-weight:600;line-h
 .tp{color:var(--green)}.tc{color:var(--text)}.to{color:var(--text2)}.tv{color:var(--amber)}.tok{color:var(--green)}.tdim{color:var(--text3)}
 
 /* SECTION */
-.sec{max-width:1100px;margin:0 auto;padding:80px 48px}
+.sec{max-width:min(1400px,92vw);margin:0 auto;padding:80px 48px}
 .sec-hd{display:flex;align-items:center;gap:16px;margin-bottom:48px}
 .sec-num{font-family:var(--mono);font-size:11px;color:var(--green);opacity:.6}
 .sec-title{font-family:var(--mono);font-size:18px;font-weight:600;color:var(--text)}
@@ -148,7 +148,7 @@ h1{font-family:var(--mono);font-size:clamp(38px,5vw,62px);font-weight:600;line-h
 
 /* CONTACT */
 .contact-wrap{background:var(--bg2);border-top:1px solid var(--border)}
-.contact-inner{max-width:1100px;margin:0 auto;padding:80px 48px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.contact-inner{max-width:min(1400px,92vw);margin:0 auto;padding:80px 48px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .c-head{font-family:var(--mono);font-size:clamp(26px,4vw,42px);font-weight:600;line-height:1.15;margin-bottom:16px}
 .c-head span{color:var(--green)}
 .c-sub{font-size:14px;color:var(--text2);line-height:1.8}
@@ -186,6 +186,10 @@ h1{font-family:var(--mono);font-size:clamp(38px,5vw,62px);font-weight:600;line-h
 
 footer{text-align:center;padding:28px;font-family:var(--mono);font-size:11px;color:var(--text3)}
 footer span{color:var(--green);opacity:.4}
+
+@media(min-width:1700px){
+  .sec,.hero,.contact-inner{max-width:1500px}
+}
 
 @media(max-width:900px){
   nav{padding:0 20px}.nav-links{display:none}
